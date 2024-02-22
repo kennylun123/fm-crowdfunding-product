@@ -8,7 +8,7 @@
  */
 @layer base {
   body {
-    @apply text-gray bg-[#181818];
+    @apply text-gray bg-gray/10;
   }
 }
 

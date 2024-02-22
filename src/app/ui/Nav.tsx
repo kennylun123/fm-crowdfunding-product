@@ -6,11 +6,11 @@ import { useState } from "react";
 import NavDialog from "@/app/ui/NavDialog";
 
 const Nav = () => {
-  const [isExpand, setIsExpand] = useState(true);
+  const [isExpand, setIsExpand] = useState(false);
 
   return (
     // Navigation menu
-    <div className="flex h-14 max-w-6xl mx-auto items-center justify-between">
+    <div className="flex h-14 xl:h-20 max-w-6xl mx-auto items-center justify-between">
       <Link href="/">
         <Image
           src="/assets/logo.svg"

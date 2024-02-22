@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={commissioner.className}>
-        <header className="fixed top-0 z-50 w-full px-6">
+        <header className="fixed top-0 z-50 w-full bg-gradient-to-b from-black/60 px-6">
           <Nav />
         </header>
         {children}
