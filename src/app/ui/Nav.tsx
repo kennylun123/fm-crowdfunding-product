@@ -19,49 +19,38 @@ const Nav = () => {
           alt="crowdfund logo"
         />
       </Link>
-      <button
-        className="lg:hidden"
-        onClick={() => setIsExpand((prevState) => !prevState)}
-        aria-label="Toggle navigation menu"
-        aria-expanded={isExpand ? "true" : "false"}
-      >
-        <Image
-          src={
-            isExpand
-              ? "/assets/icon-close-menu.svg"
-              : "/assets/icon-hamburger.svg"
-          }
-          width={16}
-          height={15}
-          alt="navigation menu button"
-        />
-      </button>
-      <nav className="hidden lg:flex text-white items-center">
-        <ul className="flex space-x-8">
+
+      <nav>
+        <button
+          className="lg:hidden"
+          onClick={() => setIsExpand((prevState) => !prevState)}
+          aria-label="menu toggle"
+          aria-expanded={isExpand ? "true" : "false"}
+        >
+          <Image
+            src={
+              isExpand
+                ? "/assets/icon-close-menu.svg"
+                : "/assets/icon-hamburger.svg"
+            }
+            width={16}
+            height={15}
+            alt="navigation menu button"
+          />
+        </button>
+        <ul className="hidden lg:flex space-x-8 items-center text-white">
           <li>
-            <Link
-              href="/"
-              className="hover:text-cyan-400"
-              aria-label="Crowdfund - About"
-            >
+            <Link href="/" className="hover:text-cyan-400">
               About
             </Link>
           </li>
           <li>
-            <Link
-              href="/"
-              className="hover:text-cyan-400"
-              aria-label="Crowdfund - Discover"
-            >
+            <Link href="/" className="hover:text-cyan-400">
               Discover
             </Link>
           </li>
           <li>
-            <Link
-              href="/"
-              className="hover:text-cyan-400"
-              aria-label="Crowdfund - Get Started"
-            >
+            <Link href="/" className="hover:text-cyan-400">
               Get Started
             </Link>
           </li>

@@ -42,29 +42,17 @@ const NavDialog = ({ closeModal }: DialogProps) => {
         <nav className="fixed top-16 right-6 w-full max-w-xs bg-white rounded-lg text-black font-semibold">
           <ul className="divide-y divide-black/10">
             <li className="p-6">
-              <Link
-                href="/"
-                className="hover:text-cyan-400"
-                aria-label="Crowdfund - About"
-              >
+              <Link href="/" className="hover:text-cyan-400">
                 About
               </Link>
             </li>
             <li className="p-6">
-              <Link
-                href="/"
-                className="hover:text-cyan-400"
-                aria-label="Crowdfund - Discover"
-              >
+              <Link href="/" className="hover:text-cyan-400">
                 Discover
               </Link>
             </li>
             <li className="p-6">
-              <Link
-                href="/"
-                className="hover:text-cyan-400"
-                aria-label="Crowdfund - Get Started"
-              >
+              <Link href="/" className="hover:text-cyan-400">
                 Get Started
               </Link>
             </li>
