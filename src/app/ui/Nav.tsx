@@ -11,7 +11,7 @@ const Nav = () => {
   return (
     // Navigation menu
     <div className="flex h-14 xl:h-20 max-w-6xl mx-auto items-center justify-between">
-      <Link href="/">
+      <Link href="/" aria-label="Crowdfund - Home">
         <Image
           src="/assets/logo.svg"
           width={128}
@@ -20,8 +20,10 @@ const Nav = () => {
         />
       </Link>
       <button
-        onClick={() => setIsExpand((preState) => !preState)}
         className="lg:hidden"
+        onClick={() => setIsExpand((prevState) => !prevState)}
+        aria-label="Toggle navigation menu"
+        aria-expanded={isExpand ? "true" : "false"}
       >
         <Image
           src={
@@ -37,17 +39,29 @@ const Nav = () => {
       <nav className="hidden lg:flex text-white items-center">
         <ul className="flex space-x-8">
           <li>
-            <Link href="/" className="hover:text-cyan-400">
+            <Link
+              href="/"
+              className="hover:text-cyan-400"
+              aria-label="Crowdfund - About"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-cyan-400">
+            <Link
+              href="/"
+              className="hover:text-cyan-400"
+              aria-label="Crowdfund - Discover"
+            >
               Discover
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-cyan-400">
+            <Link
+              href="/"
+              className="hover:text-cyan-400"
+              aria-label="Crowdfund - Get Started"
+            >
               Get Started
             </Link>
           </li>

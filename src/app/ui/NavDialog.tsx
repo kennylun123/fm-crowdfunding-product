@@ -32,24 +32,39 @@ const NavDialog = ({ closeModal }: DialogProps) => {
   return (
     mounted &&
     createPortal(
-      <div className="fixed inset-0 lg:hidden">
+      <div
+        className="fixed inset-0 lg:hidden"
+        aria-hidden={mounted ? "true" : "false"}
+      >
         {/* Dialog overlay */}
         <div ref={modalRef} className="fixed inset-0 bg-black/10" />
         {/* Dialog content */}
-        <nav className="fixed top-16 right-6 w-full max-w-md bg-white rounded-lg text-black font-semibold">
+        <nav className="fixed top-16 right-6 w-full max-w-xs bg-white rounded-lg text-black font-semibold">
           <ul className="divide-y divide-black/10">
             <li className="p-6">
-              <Link href="/" className="hover:text-cyan-400">
+              <Link
+                href="/"
+                className="hover:text-cyan-400"
+                aria-label="Crowdfund - About"
+              >
                 About
               </Link>
             </li>
             <li className="p-6">
-              <Link href="/" className="hover:text-cyan-400">
+              <Link
+                href="/"
+                className="hover:text-cyan-400"
+                aria-label="Crowdfund - Discover"
+              >
                 Discover
               </Link>
             </li>
             <li className="p-6">
-              <Link href="/" className="hover:text-cyan-400">
+              <Link
+                href="/"
+                className="hover:text-cyan-400"
+                aria-label="Crowdfund - Get Started"
+              >
                 Get Started
               </Link>
             </li>
