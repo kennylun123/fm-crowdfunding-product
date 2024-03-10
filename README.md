@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Crowdfunding product page solution
 
-## Getting Started
+This is a solution to the [Crowdfunding product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### The challenge
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Users should be able to:
 
-## Learn More
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
+- Make a selection of which pledge to make
+- See an updated progress bar and total money raised based on their pledge total after confirming a pledge
+- See the number of total backers increment by one after confirming a pledge
+- Toggle whether or not the product is bookmarked
 
-To learn more about Next.js, take a look at the following resources:
+### Screenshot
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img src="./screeshots/crowfunding-product-page-mobile.png" width="400px">
+<img src="./screeshots/crowfunding-product-page-desktop.png" width="600px">
+<img src="./screeshots/crowfunding-product-page-desktop-modal.png" width="600px">
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Links
 
-## Deploy on Vercel
+- Solution URL: [https://www.frontendmentor.io/solutions/crowfunding-product-page-using-typescript-nextjs-tailwindcss-zdH3i076Ld](https://www.frontendmentor.io/solutions/crowfunding-product-page-using-typescript-nextjs-tailwindcss-zdH3i076Ld)
+- Live Site URL: [https://fm-crowfunding-product.vercel.app/](https://fm-crowfunding-product.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## My process
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- TailwindCSS
+- TypeScript
+
+### What I learned
+
+- TypeScript, type safety helps me to improve error handling in applications
+- TailwindCSS
+- Dialog / Modal box, implemented by React Portal. We should instead use the third party library to ensure the correct behaviours of a dialog.
+
+## Author
+
+- Website - [Kenny Ng](https://github.com/kennylun123)
+- Frontend Mentor - [@kennylun123](https://www.frontendmentor.io/profile/kennylun123)
+- Twitter - [@kenny_ng123](https://www.twitter.com/kenny_ng123)
