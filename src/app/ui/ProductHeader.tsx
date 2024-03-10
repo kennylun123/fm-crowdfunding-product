@@ -21,7 +21,9 @@ const ProductHeader = ({
         alt="Product illustration"
         className="absolute top-0 -translate-y-1/2"
       />
-      <h1 className="text-[22px] leading-6 font-bold mt-4">{title}</h1>
+      <h1 className="text-[22px] lg:text-2xl leading-6 font-bold mt-4">
+        {title}
+      </h1>
       <p className="mt-6">{content}</p>
       <div className="w-full flex space-x-2 items-center justify-between mt-6 lg:mt-8">
         <CustomButton

@@ -12,24 +12,23 @@ const ProductStatus = ({
     Math.floor((backedFunding / targetFunding) * 100),
     100
   );
-
   return (
     <div className="card-container">
       <ul className="grid absolute-divide-y sm:w-full sm:grid-flow-col sm:grid-cols-3 sm:gap-8 sm:absolute-divide-x sm:text-start">
         <li className="relative px-6 py-6 sm:p-0 font-medium">
-          <span className="block text-[2rem] leading-relaxed font-bold text-black">
+          <span className="block text-[2rem] lg:text-[2.25rem] leading-relaxed font-bold text-black">
             {formatCurrency(backedFunding)}
           </span>
           of {formatCurrency(targetFunding)} backed
         </li>
         <li className="relative px-6 py-6 sm:p-0 font-medium">
-          <span className="block text-[2rem] leading-relaxed font-bold text-black">
+          <span className="block text-[2rem] lg:text-[2.25rem] leading-relaxed font-bold text-black">
             {backers.toLocaleString()}
           </span>
           total backers
         </li>
         <li className="relative px-6 py-6 sm:p-0 font-medium">
-          <span className="block text-[2rem] leading-relaxed font-bold text-black">
+          <span className="block text-[2rem] lg:text-[2.25rem] leading-relaxed font-bold text-black">
             {daysLeft.toLocaleString()}
           </span>
           days left

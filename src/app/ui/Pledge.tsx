@@ -26,7 +26,7 @@ const Pledge = ({
 
       <div className="flex flex-col lg:flex-row items-start justify-between gap-6">
         <p className="flex items-center gap-2 font-medium">
-          <span className="text-black text-3xl font-bold">
+          <span className="text-black text-3xl lg:text-4xl font-bold">
             {qty.toLocaleString()}
           </span>
           left

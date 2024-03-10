@@ -98,7 +98,9 @@ const Dialog = ({
               onSubmit={handleSubmit}
             >
               <div className="flex items-center justify-between">
-                <h2 className="text-lg font-bold">Back this project</h2>
+                <h2 className="text-lg lg:text-xl font-bold">
+                  Back this project
+                </h2>
                 <CloseButton handleClose={closeModal} />
               </div>
               <p>{content}</p>

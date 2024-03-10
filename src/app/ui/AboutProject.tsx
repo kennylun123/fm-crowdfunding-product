@@ -8,7 +8,7 @@ const AboutProject = ({
 }: AboutProjectProps) => {
   return (
     <div className="card-container space-y-6 items-start text-left">
-      <h2 className="text-lg font-bold">About this project</h2>
+      <h2 className="text-lg lg:text-xl font-bold">About this project</h2>
       {contents.map((item, index) => (
         <p key={index}>{item}</p>
       ))}
