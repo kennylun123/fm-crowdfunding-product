@@ -7,6 +7,18 @@
  * plugins.
  */
 @layer base {
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
   h1,
   h2,
   h3,
@@ -33,6 +45,14 @@
   .pledge-container {
     @apply flex flex-col px-6 py-6 border border-gray/40 rounded-lg bg-white;
   }
+
+  .dialog__form-container {
+    @apply w-full max-w-[46rem] mx-auto px-6 py-8 space-y-6 rounded-lg bg-white overflow-scroll;
+  }
+
+  .dialog__thanks-container {
+    @apply w-full max-w-[33.5rem] flex flex-col items-center rounded-lg bg-white px-6 py-10 lg:p-10 text-center;
+  }
 }
 
 /**
@@ -52,42 +72,3 @@
     @apply after:content-[""] after:absolute after:inset-auto after:bottom-0 after:right-0 after:w-px after:h-5/6 after:bg-gray/40;
   }
 }
-
-/**
-  * Use this directive to control where Tailwind injects the hover, focus,
-  * responsive, dark mode, and other variants of each class.
-  *
-  * If omitted, Tailwind will append these classes to the very end of
-  * your stylesheet by default.
-  */
-@layer variants;
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */

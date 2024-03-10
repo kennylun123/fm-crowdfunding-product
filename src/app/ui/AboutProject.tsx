@@ -1,12 +1,11 @@
 import Pledge from "@/app/ui/Pledge";
-import { pledgeProps } from "@/app/ui/Pledge";
+import { AboutProjectProps } from "@/app/lib/definitions";
 
-type aboutProjectProps = {
-  contents: string[];
-  pledges: pledgeProps[];
-};
-
-const AboutProject = ({ contents, pledges }: aboutProjectProps) => {
+const AboutProject = ({
+  contents,
+  pledges,
+  toggleDialogById,
+}: AboutProjectProps) => {
   return (
     <div className="card-container space-y-6 items-start text-left">
       <h2 className="text-lg font-bold">About this project</h2>
@@ -16,11 +15,13 @@ const AboutProject = ({ contents, pledges }: aboutProjectProps) => {
 
       {pledges.map((item) => (
         <Pledge
+          id={item.id}
           key={item.title}
           title={item.title}
           content={item.content}
           price={item.price}
           qty={item.qty}
+          toggleDialogById={toggleDialogById}
         />
       ))}
     </div>

@@ -1,19 +1,18 @@
 import { formatCurrency } from "@/app/lib/utils";
-
-type productStatusProps = {
-  targetFunding: number;
-  backedFunding: number;
-  backers: number;
-  daysLeft: number;
-};
+import { ProductStatusProps } from "@/app/lib/definitions";
 
 const ProductStatus = ({
   targetFunding,
   backedFunding,
   backers,
   daysLeft,
-}: productStatusProps) => {
-  const percentage = Math.floor((backedFunding / targetFunding) * 100);
+}: ProductStatusProps) => {
+  // Limit the maximum of percentage to not exceed 100
+  const percentage = Math.min(
+    Math.floor((backedFunding / targetFunding) * 100),
+    100
+  );
+
   return (
     <div className="card-container">
       <ul className="grid absolute-divide-y sm:w-full sm:grid-flow-col sm:grid-cols-3 sm:gap-8 sm:absolute-divide-x sm:text-start">
@@ -36,7 +35,6 @@ const ProductStatus = ({
           days left
         </li>
       </ul>
-      {/* Progress bar */}
       <ProgressBar percentage={percentage} />
     </div>
   );

@@ -4,19 +4,15 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-type DialogProps = {
-  closeModal: () => void;
-};
-
-const NavDialog = ({ closeModal }: DialogProps) => {
+const NavDialog = ({ closeModal }: { closeModal: () => void }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
 
-  function checkClickOutside(e: MouseEvent) {
+  const checkClickOutside = (e: MouseEvent) => {
     if (modalRef.current && modalRef.current.contains(e.target as Node)) {
       closeModal();
     }
-  }
+  };
 
   useEffect(() => {
     // use mounted state to force this component to render on client browser only
@@ -33,6 +29,7 @@ const NavDialog = ({ closeModal }: DialogProps) => {
     mounted &&
     createPortal(
       <div
+        id="nav_dialog"
         className="fixed inset-0 lg:hidden"
         aria-hidden={mounted ? "true" : "false"}
       >
