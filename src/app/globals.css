@@ -26,10 +26,10 @@
     @apply text-black;
   }
   p {
-    @apply leading-[24px];
+    @apply leading-[24px] lg:leading-[32px];
   }
   body {
-    @apply text-sm lg:text-base text-gray bg-gray/10;
+    @apply text-sm lg:text-base text-gray bg-gray/5;
   }
 }
 
@@ -43,7 +43,7 @@
   }
 
   .pledge-container {
-    @apply flex flex-col px-6 py-6 border border-gray/40 rounded-lg bg-white;
+    @apply px-6 py-6 border border-gray/40 rounded-lg bg-white;
   }
 
   .dialog__form-container {

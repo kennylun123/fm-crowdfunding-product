@@ -87,64 +87,62 @@ const Dialog = ({
     createPortal(
       <div
         id="pledge_dialog"
-        className="fixed inset-0"
+        className="fixed inset-0 grid place-content-center bg-black/40 px-6 pt-36 pb-10"
         aria-hidden={mounted ? "true" : "false"}
       >
-        <div className="fixed inset-0 grid place-content-center bg-black/10 px-6 pt-36 pb-10">
-          {!submitted ? (
-            <form
-              ref={modalRef}
-              className="dialog__form-container"
-              onSubmit={handleSubmit}
-            >
-              <div className="flex items-center justify-between">
-                <h2 className="text-lg lg:text-xl font-bold">
-                  Back this project
-                </h2>
-                <CloseButton handleClose={closeModal} />
-              </div>
-              <p>{content}</p>
-
-              <fieldset className="space-y-6">
-                {defaultOptions.map((item) => (
-                  <DialogPledgeOption
-                    key={item.title}
-                    pledge={item}
-                    selectedOptionId={selectedOptionId}
-                    handleOptionChange={handleOptionChange}
-                    input={input}
-                    setInput={setInput}
-                  />
-                ))}
-              </fieldset>
-            </form>
-          ) : (
-            <div ref={modalRef} className="dialog__thanks-container">
-              <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" fillRule="evenodd">
-                  <circle fill="#3CB3AB" cx="32" cy="32" r="32" />
-                  <path
-                    stroke="#FFF"
-                    strokeWidth="5"
-                    d="M20 31.86L28.093 40 44 24"
-                  />
-                </g>
-              </svg>
-              <h2 className="mt-6 lg:mt-8 font-bold text-lg lg:text-xl">
-                Thanks for your support!
+        {!submitted ? (
+          <form
+            ref={modalRef}
+            className="dialog__form-container"
+            onSubmit={handleSubmit}
+          >
+            <div className="flex items-center justify-between">
+              <h2 className="text-lg lg:text-xl font-bold">
+                Back this project
               </h2>
-              <p className="mt-6 lg:leading-7">
-                {`Your pledge brings us one step closer to sharing ${title} worldwide. You will get an email once our
-                campaign is completed.`}
-              </p>
-              <CustomButton
-                title="Got it!"
-                containerStyle="mt-8"
-                handleClick={closeModal}
-              />
+              <CloseButton handleClose={closeModal} />
             </div>
-          )}
-        </div>
+            <p>{content}</p>
+
+            <fieldset className="space-y-6">
+              {defaultOptions.map((item) => (
+                <DialogPledgeOption
+                  key={item.title}
+                  pledge={item}
+                  selectedOptionId={selectedOptionId}
+                  handleOptionChange={handleOptionChange}
+                  input={input}
+                  setInput={setInput}
+                />
+              ))}
+            </fieldset>
+          </form>
+        ) : (
+          <div ref={modalRef} className="dialog__thanks-container">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fillRule="evenodd">
+                <circle fill="#3CB3AB" cx="32" cy="32" r="32" />
+                <path
+                  stroke="#FFF"
+                  strokeWidth="5"
+                  d="M20 31.86L28.093 40 44 24"
+                />
+              </g>
+            </svg>
+            <h2 className="mt-6 lg:mt-8 font-bold text-lg lg:text-xl">
+              Thanks for your support!
+            </h2>
+            <p className="mt-6 lg:leading-7">
+              {`Your pledge brings us one step closer to sharing ${title} worldwide. You will get an email once our
+                campaign is completed.`}
+            </p>
+            <CustomButton
+              title="Got it!"
+              containerStyle="mt-8"
+              handleClick={closeModal}
+            />
+          </div>
+        )}
       </div>,
       document.body
     )

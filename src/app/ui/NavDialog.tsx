@@ -34,7 +34,7 @@ const NavDialog = ({ closeModal }: { closeModal: () => void }) => {
         aria-hidden={mounted ? "true" : "false"}
       >
         {/* Dialog overlay */}
-        <div ref={modalRef} className="fixed inset-0 bg-black/10" />
+        <div ref={modalRef} className="fixed inset-0 bg-black/40" />
         {/* Dialog content */}
         <nav className="fixed top-16 right-6 w-full max-w-xs bg-white rounded-lg text-black font-semibold">
           <ul className="divide-y divide-black/10">
