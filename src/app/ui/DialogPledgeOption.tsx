@@ -66,7 +66,7 @@ const DialogPledgeOption = ({
                 type="number"
                 name="amount"
                 value={input}
-                min={1}
+                min={(price && price) || 1}
                 max={9999}
                 onChange={(e) => setInput(Number(e.target.value))}
                 onFocus={(e) => e.target.select()}

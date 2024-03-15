@@ -140,6 +140,7 @@ const Dialog = ({
               title="Got it!"
               containerStyle="mt-8"
               handleClick={closeModal}
+              type="button"
             />
           </div>
         )}
